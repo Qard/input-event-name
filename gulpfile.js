@@ -13,8 +13,22 @@ gulp.task('test', ['build'], function () {
     read: false
   })
   .pipe(karma({
-    configFile: 'karma.conf.js',
-    action: 'run'
+    action: 'run',
+    files: ['{dist,test}/*.js'],
+
+    // Test the common browsers
+    browsers: ['PhantomJS','Firefox','Chrome'],
+
+    // Test with mocha, but browserify tests with babelify
+    // transform first, so I can use require and es6 stuff
+    frameworks: ['browserify','mocha'],
+    preprocessors: {
+      '{dist,test}/*.js': ['browserify']
+    },
+    browserify: {
+      debug: true,
+      transform: ['babelify']
+    }
   }))
   .once('error', function (e) {
     console.error(e.message)
