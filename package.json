@@ -1,0 +1,52 @@
+{
+  "name": "input-event-name",
+  "description": "Transform MouseEvent/KeyboardEvent objects to readable names",
+  "version": "1.0.0",
+  "author": "Stephen Belanger <admin@stephenbelanger.com>",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "homepage": "https://github.com/Qard/input-event-name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Qard/input-event-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qard/input-event-name/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp test",
+    "prepublish": "gulp build"
+  },
+  "devDependencies": {
+    "babelify": "~6.0.2",
+    "gulp": "~3.8.11",
+    "gulp-babel": "~5.1.0",
+    "gulp-karma": "0.0.4",
+    "karma": "~0.12.31",
+    "karma-browserify": "~4.1.2",
+    "karma-chrome-launcher": "~0.1.8",
+    "karma-cli": "0.0.4",
+    "karma-firefox-launcher": "~0.1.4",
+    "karma-mocha": "~0.1.10",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "mocha": "~2.2.4",
+    "should": "~6.0.1"
+  },
+  "dependencies": {
+    "babelify": "~6.0.2",
+    "gulp-karma": "~0.0.4",
+    "gulp": "~3.8.11",
+    "gulp-babel": "~5.1.0",
+    "karma": "~0.12.31",
+    "karma-browserify": "~4.1.2",
+    "karma-chrome-launcher": "~0.1.8",
+    "karma-cli": "~0.0.4",
+    "karma-firefox-launcher": "~0.1.4",
+    "karma-mocha": "~0.1.10",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "should": "~6.0.1"
+  }
+}
