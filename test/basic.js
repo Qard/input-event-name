@@ -21,7 +21,7 @@ describe('basic', () => {
     })
   })
 
-  // Test inclusion of mouse buttons
+  // This corresponds to event.buttons
   let BUTTONS = {
     LEFT: 1,
     RIGHT: 2,
@@ -31,10 +31,26 @@ describe('basic', () => {
   }
   Object.keys(BUTTONS).forEach((button) => {
     let name = button.toLowerCase()
-    it(`should include ${name} button state`, () => {
+    it(`should indentify ${name} from multi-button state`, () => {
       mouse({
         buttons: BUTTONS[button]
       }).should.equal(name)
+    })
+  })
+
+  // This corresponds to event.button
+  let BUTTON_NAMES = [
+    'left',
+    'middle',
+    'right',
+    'back',
+    'forward'
+  ]
+  BUTTON_NAMES.forEach((button, index) => {
+    it(`should identify ${button} from single-button state`, () => {
+      mouse({
+        button: index
+      }).should.equal(button)
     })
   })
 
