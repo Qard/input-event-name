@@ -1,5 +1,7 @@
 # input-event-name
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Qard/input-event-name.svg)](https://greenkeeper.io/)
+
 This is a helper to transform MouseEvent and KeyboardEvent instances to a readable/parseable string. It's useful for event-emitter keys.
 
 ## Install
